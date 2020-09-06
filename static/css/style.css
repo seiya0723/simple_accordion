@@ -1,0 +1,187 @@
+html {
+  font-size: 18px;
+}
+@media (max-width:  768px)  {
+  html {
+    font-size: 15px;
+  }
+}
+
+
+header {
+    background:crimson;
+}
+header h1 {
+    color:white;
+    text-align:center;
+}
+
+body main {
+    min-height:101vh;
+}
+
+
+
+/* HTML+CSSのみバージョン */
+
+
+.chkbox {
+    display:none;
+}
+
+
+/* type n version */
+
+.acd_n_button {
+    width:100%;
+    height:3rem;
+    background:orange;
+
+    margin:0;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    
+    position:relative;
+}
+.acd_n_button_title {
+    padding-left:0.5rem;
+    color:white;
+    font-weight:bold;
+}
+
+.acd_n_body {
+    visibility:hidden;
+    height:0;
+    opacity:0;
+    background:skyblue;
+    transition:0.5s;
+    padding:0.5rem;
+    overflow:hidden;
+}
+input[type="checkbox"]#acd_1:checked ~ .acd_n_body{
+    visibility:visible;
+    height:20rem;
+    opacity:1;
+    transition:0.5s;
+}
+
+
+/* type f version */
+
+.acd_f_button {
+    width:100%;
+    height:3rem;
+    background:orange;
+
+    margin:0;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    
+    position:relative;
+}
+.acd_f_icon {
+    position:absolute;
+    right:0;
+    
+    width:3rem;
+    height:3rem;
+    background:crimson;
+    color:white;
+    font-size:1.5rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.acd_f_icon i {
+    transition:0.5s;
+}
+.acd_f_button_title {
+    padding-left:0.5rem;
+    color:white;
+    font-weight:bold;
+}
+
+.acd_f_body {
+    visibility:hidden;
+    height:0;
+    opacity:0;
+    background:skyblue;
+    transition:0.5s;
+    padding:0.5rem;
+    overflow:hidden;
+}
+input[type="checkbox"]#acd_2:checked ~ .acd_f_body{
+    visibility:visible;
+    height:20rem;
+    opacity:1;
+    transition:0.5s;
+}
+input[type="checkbox"]#acd_2:checked + .acd_f_button .acd_f_icon i{
+    transition:0.5s;
+    transform:rotate(45deg);
+}
+
+
+/* type c version */
+
+.acd_c_button {
+    width:100%;
+    height:3rem;
+    background:orange;
+
+
+    display:flex;
+    align-items:center;
+    
+    position:relative;
+}
+.acd_c_icon {
+    position:absolute;
+    right:0;
+    
+    width:3rem;
+    height:3rem;
+    background:crimson;
+    color:white;
+    font-size:1.5rem;
+    cursor:pointer;
+
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.acd_c_icon i {
+    transition:0.5s;
+}
+.acd_c_button_title {
+    padding-left:0.5rem;
+    color:white;
+    font-weight:bold;
+}
+
+.acd_c_body {
+    visibility:hidden;
+    height:0;
+    opacity:0;
+    background:skyblue;
+    transition:0.5s;
+    padding:0.5rem;
+    overflow:hidden;
+}
+input[type="checkbox"]#acd_3:checked ~ .acd_c_body{
+    visibility:visible;
+    height:20rem;
+    opacity:1;
+    transition:0.5s;
+}
+input[type="checkbox"]#acd_3:checked + .acd_c_button .acd_c_icon i{
+    transition:0.5s;
+    transform:rotateX(180deg);
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>簡易アコーディオン</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+    <header class="">
+        <h1>簡易アコーディオン</h1>
+    </header>
+
+    <main class="container">
+    
+
+        <h2>HTML+CSSのみのバージョン(type:n)</h2>
+
+        <input id="acd_1" class="chkbox" type="checkbox">
+        <label class="acd_n_button" for="acd_1">
+            <div class="acd_n_button_title">HTML+CSS</div>
+        </label>
+        <div class="acd_n_body">
+            <ul>
+                <li>ここに項目を記述する</li>
+                <li>ここに項目を記述する</li>
+                <li>ここに項目を記述する</li>
+            </ul>
+
+            <p>HTML+CSSの場合は仕組み上帯全体がボタンになっているので、複数のボタンを設置する場合は修正が必要。</p>
+            <p>overflow:hiddenが無い場合、閉まる時に中の要素が一瞬はみ出るので要指定。</p>
+            <p>縦方向のpadding、marginの指定をしていると、閉まる時一瞬カクつく。対策としてopacityを指定すると良し</p>
+        </div>
+
+        <h2>HTML+CSS+fontawesomeバージョン(type:f)</h2>
+    
+        <input id="acd_2" class="chkbox" type="checkbox">
+        <label class="acd_f_button" for="acd_2">
+            <div class="acd_f_button_title">HTML+CSS+fontawesome</div>
+            <div class="acd_f_icon"><i class="fas fa-plus"></i></div>
+        </label>
+        <div class="acd_f_body">
+            <ul>
+                <li>ここに項目を記述する</li>
+                <li>ここに項目を記述する</li>
+                <li>ここに項目を記述する</li>
+            </ul>
+
+            <p>labelタグのbeforeに文字コードでfontawesomeを指定することでアイコンにすることができる。</p>
+
+            <p>transform:rotate(45deg)指定することで、+とxをアニメーションで表示できる</p>
+        </div>
+
+        <h2>HTML+CSS+fontawesomeコンパクトバージョン(type:c)</h2>
+
+        <input id="acd_3" class="chkbox" type="checkbox">
+        <div class="acd_c_button">
+            <div class="acd_c_button_title">HTML+CSS+fontawesome(compact)</div>
+            <label class="acd_c_icon" for="acd_3"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="acd_c_body">
+            <ul>
+                <li>ここに項目を記述する</li>
+                <li>ここに項目を記述する</li>
+                <li>ここに項目を記述する</li>
+            </ul>
+
+            <p>labelの部分は右の赤色の部分だけなので、ボタンを追加したい時に有効。</p>
+
+            <p>labelの場所をボタン部分だけに指定。rotateX(180deg)指定をすることで、矢印を反転できる。</p>
+        </div>
+
+
+    
+    </main>
+
+</body>
+</html>
+
